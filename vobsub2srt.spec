@@ -1,6 +1,6 @@
 %define commit 0ba6e25
 %define subver	pre7
-%define rel	0.1
+%define rel	1
 Summary:	VobSub2SRT .sub/.idx to .srt subtitle converter
 Name:		vobsub2srt
 Version:	1.0
@@ -40,8 +40,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install -C build \
 	DESTDIR=$RPM_BUILD_ROOT
 
-mv $RPM_BUILD_ROOT%{_docdir}/%{name}/copyright .
-mv $RPM_BUILD_ROOT%{_docdir}/%{name}/README .
+mv $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}/copyright .
+mv $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}/README .
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -51,3 +51,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc README copyright
 %attr(755,root,root) %{_bindir}/vobsub2srt
 %{_mandir}/man1/vobsub2srt.1*
+%{bash_compdir}/vobsub2srt
