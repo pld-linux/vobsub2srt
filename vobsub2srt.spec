@@ -9,6 +9,8 @@ License:	GPL v3+
 Group:		Applications/Multimedia
 Source0:	https://github.com/ruediger/VobSub2SRT/archive/%{commit}/%{name}-%{version}%{subver}+g%{commit}.tar.gz
 # Source0-md5:	e291abe6f4fca5dd8df4db98e97c69bb
+Patch0:		https://github.com/ruediger/VobSub2SRT/pull/72.patch
+# Patch0-md5:	fd20b401b96fc646c74c399b57a07b65
 URL:		https://github.com/ruediger/VobSub2SRT
 BuildRequires:	cmake
 BuildRequires:	libtiff-devel
@@ -23,6 +25,7 @@ from the MPlayer project.
 %prep
 %setup -qc
 mv VobSub2SRT-%{commit}*/* .
+%patch0 -p1
 
 %build
 install -d build
