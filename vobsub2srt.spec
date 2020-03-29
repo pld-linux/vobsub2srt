@@ -4,7 +4,7 @@
 Summary:	VobSub2SRT .sub/.idx to .srt subtitle converter
 Name:		vobsub2srt
 Version:	1.0
-Release:	0.%{subver}.%{rel}
+Release:	%{rel}.%{subver}+g%{commit}
 License:	GPL v3+
 Group:		Applications/Multimedia
 Source0:	https://github.com/ruediger/VobSub2SRT/archive/%{commit}/%{name}-%{version}%{subver}+g%{commit}.tar.gz
