@@ -1,0 +1,10 @@
+--- vobsub2srt-1.0/src/vobsub2srt.c++.orig	2017-12-19 00:13:38.000000000 +0100
++++ vobsub2srt-1.0/src/vobsub2srt.c++	2023-04-09 07:42:21.499041205 +0200
+@@ -30,6 +30,7 @@
+ #include <string>
+ #include <cstdio>
+ #include <vector>
++#include <climits>
+ using namespace std;
+ 
+ #include "langcodes.h++"
