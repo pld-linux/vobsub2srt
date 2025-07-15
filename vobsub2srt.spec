@@ -32,8 +32,8 @@ oparty na kodzie z projektu MPlayer.
 %prep
 %setup -qc
 %{__mv} VobSub2SRT-%{commit}*/* .
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 %build
 install -d build
